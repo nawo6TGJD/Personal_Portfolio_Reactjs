@@ -8,39 +8,61 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
+const projects = [
+    {
+    title: "Mirai Global (PVT) Ltd",
+    description: "Created a responsive, modern website for Mirai Global,Japan agency.",
+    imgUrl: projImg2,
+    link: "https://www.miraiglobal.jp"
+  },
+  {
+    title: "PLATTO",
+    description: "Designed and developed a responsive, user-friendly food ordering application.",
+    imgUrl: projImg1,
+    link: "https://nawo6TGJD.github.io/Platto/"
+  },
 
-  const projects = [
+  {
+    title: "Portfolio Website",
+    description: "Responsive Design",
+    imgUrl: projImg3,
+    link: "https://example.com/project3"
+  },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-  ];
+    title: "Business Startup",
+    description: "Design & Development",
+    imgUrl: projImg1,
+    link: "https://example.com/project1"
+  },
+  {
+    title: "E-commerce App",
+    description: "React & Node.js",
+    imgUrl: projImg2,
+    link: "https://example.com/project2"
+  },
+  {
+    title: "Portfolio Website",
+    description: "Responsive Design",
+    imgUrl: projImg3,
+    link: "https://example.com/project3"
+  },
+];
+const projects2= [
+  {
+    title: "Business Startup",
+    description: "Design & Development",
+    imgUrl: projImg1,
+    link: "https://example.com/project1"
+  },
+  {
+    title: "E-commerce App",
+    description: "React & Node.js",
+    imgUrl: projImg2,
+    link: "https://example.com/project2"
+  },
+  
+];
+
 
   return (
     <section className="project" id="projects">
@@ -80,7 +102,18 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                         <Row>
+                        {
+                          projects2.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
