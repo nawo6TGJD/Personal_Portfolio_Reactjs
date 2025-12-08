@@ -3,7 +3,17 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/project-img5.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import projImg6 from "../assets/img/project-img6.png";
+import projImg7 from "../assets/img/project-img7.png";
+import projImg8 from "../assets/img/project-img8.png";
+import projImg9 from "../assets/img/project-img9.png";
+import projImg10 from "../assets/img/project-img10.png";
+import projImg11 from "../assets/img/project-img11.png";
+import projImg12 from "../assets/img/project-img12.png";  
+
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -11,58 +21,86 @@ export const Projects = () => {
 const projects = [
     {
     title: "Mirai Global (PVT) Ltd",
-    description: "Created a responsive, modern website for Mirai Global,Japan agency.",
+    description: "Created a responsive, modern website for Mirai Global,Japan agency. ",
     imgUrl: projImg2,
     link: "https://www.miraiglobal.jp"
   },
   {
     title: "PLATTO",
-    description: "Designed and developed a responsive, user-friendly food ordering application.",
+    description: "React.js - Frontend Development",
     imgUrl: projImg1,
     link: "https://nawo6TGJD.github.io/Platto/"
   },
 
   {
-    title: "Portfolio Website",
-    description: "Responsive Design",
+    title: "BrewaHub",
+    description: "Java , Spring Boot, MySQL - Backend Development",
     imgUrl: projImg3,
-    link: "https://example.com/project3"
+    link: "https://github.com/nawo6TGJD/BrewHub.git"
   },
     {
-    title: "Business Startup",
-    description: "Design & Development",
-    imgUrl: projImg1,
+    title: "Cloud Mart",
+    description: "Java , Spring Boot, MySQL - Backend Development",
+    imgUrl: projImg4,
     link: "https://example.com/project1"
   },
   {
-    title: "E-commerce App",
-    description: "React & Node.js",
-    imgUrl: projImg2,
+    title: "YumZone",
+    description: "React.js - Frontend Development",
+    imgUrl: projImg5,
     link: "https://example.com/project2"
   },
   {
-    title: "Portfolio Website",
-    description: "Responsive Design",
-    imgUrl: projImg3,
+    title: "CommerceX ",
+    description: "React.js , Springboot , java - Full Stack Development",
+    imgUrl: projImg6,
+    link: "https://example.com/project3"
+  },
+    {
+    title: " ByteBazaar ",
+    description: "Springboot , java - Backend Development",
+    imgUrl: projImg7,
     link: "https://example.com/project3"
   },
 ];
 const projects2= [
   {
-    title: "Business Startup",
-    description: "Design & Development",
-    imgUrl: projImg1,
+    title: "CalFit",
+    description: "Flutter Application",
+    imgUrl: projImg8,
     link: "https://example.com/project1"
   },
   {
-    title: "E-commerce App",
-    description: "React & Node.js",
-    imgUrl: projImg2,
+    title: "Slice",
+    description: "Flutter Application",
+    imgUrl: projImg9,
+    link: "https://example.com/project2"
+  },
+    {
+    title: "Cosmos",
+    description: "Flutter and Node.js Full Stack Application",
+    imgUrl: projImg10,
+    link: "https://example.com/project2"
+  },
+    {
+    title: "Recipe App ",
+    description: "React Native Application",
+    imgUrl: projImg11,
     link: "https://example.com/project2"
   },
   
 ];
 
+const projects3= [
+  {
+    title: "Final Year Research Project",
+    description: "AI-Based Sinhala News Credibility Ranking System",
+    imgUrl: projImg12,
+    link: "https://example.com/project1"
+  },
+ 
+  
+];
 
   return (
     <section className="project" id="projects">
@@ -77,13 +115,13 @@ const projects2= [
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                      <Nav.Link eventKey="first">Web</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      <Nav.Link eventKey="second">Mobile-Apps</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Ai-Research</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -116,7 +154,18 @@ const projects2= [
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                        <Row>
+                        {
+                          projects3.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
