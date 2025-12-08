@@ -70,7 +70,6 @@ export const Banner = () => {
 
     background: "transparent",
 
-    /* Glow effect */
     boxShadow: "0 0 5px 10px "
         }}
       >
@@ -82,7 +81,7 @@ export const Banner = () => {
       </div>
       
 
-      {/* ⭐ BANNER SECTION */}
+
       <section className="banner" id="home" style={{ paddingTop: "380px" }}  >
         <Container>
           <Row className="align-items-center">
