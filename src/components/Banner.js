@@ -98,8 +98,7 @@ export const Banner = () => {
 
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industry's standard dummy text
-                      ever since the 1500s.
+                      industry. 
                       e:\2025\job\react native intreview\react\react interview.pdf
                     </p>
 
